@@ -1,0 +1,141 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: surui
+ * @Date: 2020-11-27 16:46:42
+ * @LastEditors: surui
+ * @LastEditTime: 2020-11-28 20:26:25
+-->
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>携程在手，说走就走</title>
+    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="search">
+            <span>搜索：目的地/酒店/景点/航班号</span>
+        </div>
+        <a href="#" class="user">
+            <span>我 的</span>
+        </a>
+    </header>
+
+    <!-- banner -->
+    <section>
+        <div class="banner"></div>
+    </section>
+
+    <!-- loacl-nav -->
+    <ul class="local-nav">
+        <li>
+            <a href="#">
+                <span class="icon-local"></span>
+                <span>攻略·景点</span>
+            </a>
+        </li>
+        <li><a href="#"><span class="icon-local"></span>
+                <span>门票·玩乐</span></a></li>
+        <li><a href="#"><span class="icon-local"></span>
+                <span>美食林</span></a></li>
+        <li><a href="#"><span class="icon-local"></span>
+                <span>周边游</span></a></li>
+        <li><a href="#"><span class="icon-local"></span>
+                <span>一日游</span></a> </li>
+    </ul>
+
+    <!-- nav -->
+    <nav>
+        <div class="nav-comment grid-nav-hotel">
+            <a href="#">
+                <span>酒店</span>
+            </a>
+            <a href="#">
+                <span>民宿·客栈</span>
+            </a>
+            <a href="#">
+                <span class="grid-nav-jhj"><span>特价爆款</span></span>
+            </a>
+        </div>
+        <div class="nav-comment grid-nav-flight">
+            <a href="#">
+                <span>机票</span>
+            </a>
+            <a href="#">
+                <span>火车票</span>
+            </a>
+            <a href="#">
+                <span>汽车船票</span>
+            </a>
+            <a href="#">
+                <span>专车·租车</span>
+            </a>
+        </div>
+        <div class="nav-comment grid-nav-travel">
+            <a href="#">
+                <span>旅游</span>
+            </a>
+            <a href="#">
+                <span>高铁游</span>
+            </a>
+            <a href="#">
+                <span>邮轮游</span>
+            </a>
+            <a href="#">
+                <span>定制游</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- subnav -->
+    <ul class="subnav-entry">
+        <li>
+            <a href="#">
+                <span class="subnav-icon"></span>
+                <span>自由行</span>
+            </a>
+        </li>
+        <li><a href="#"><span class="subnav-icon"></span><span>WiFi电话卡</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>保险·签证</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>换钞·购物</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>向导·包车</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>特价机票</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>礼品卡</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>申卡·借钱</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>旅拍</span></a></li>
+        <li><a href="#"><span class="subnav-icon"></span><span>更多</span></a></li>
+    </ul>
+
+    <!-- footer -->
+    <footer class="tool-box">
+        <div class="tool-cn">
+            <a href="#"><span class="tool-icon"></span><span>电话预定</span></a>
+            <a href="#"><span class="tool-icon"></span><span>下载客户端</span></a>
+            <a href="#"><span class="tool-icon"></span><span>我的</span></a>
+        </div>
+        <div class="tool-ver">
+            <a href="#">网站地图| Language|电脑版</a>
+        </div>
+        <p>© <label>2020</label> 携程旅行| <a href="#">沪ICP备08023580号</a> </p>
+    </footer>
+</body>
+<script>
+    // local-nav 遍历精灵图
+    let loacl_icon = document.querySelectorAll('.icon-local');
+    for (let i = 0; i < loacl_icon.length; i++) {
+        loacl_icon[i].style.backgroundPosition = '0-' + i * 34 + 'px';
+    }
+    //subnav 遍历精灵图
+    let subnav_icon = document.querySelectorAll('.subnav-icon')
+    for (let i = 0; i < subnav_icon.length; i++) {
+        subnav_icon[i].style.backgroundPosition = '0-' + i * 28 + 'px';
+    }
+</script>
+
+</html>

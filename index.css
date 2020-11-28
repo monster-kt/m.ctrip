@@ -1,0 +1,302 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: surui
+ * @Date: 2020-11-27 16:48:30
+ * @LastEditors: surui
+ * @LastEditTime: 2020-11-28 20:26:00
+ */
+*{
+    padding:0;
+    margin: 0;
+}
+/* 常用初始化样式 */
+body{
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei";
+    color: #000;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    /* 在移动端浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式 */
+    -webkit-appearance:none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul,li,ol{
+    list-style: none;
+}
+
+/* 头部  */
+header{
+    display: flex;
+    /* 固定定位与父级没关系，它以屏幕为准 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /* 固定的盒子应该有宽度 */
+    width: 100%;
+    height: 44px;
+    max-width: 540px;
+    min-width: 320px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    align-items: center;
+}
+.search{
+    position: relative;
+    flex: 1;
+    height: 28px;
+    border-radius: 15px;
+    background-color: #ececed;
+    padding: 2px 5px;
+    color: #666666;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.search span{
+    padding-left: 35px;
+}
+.search span::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    /* 加了绝对定位的盒子直接有大小 */
+    /* display: block; */
+    width: 35px;
+    height: 100%;
+    background: url(upload/home-common-sprite2x@v7.15.png) no-repeat 14px 2px;
+    background-size: 21px auto;
+    text-align: center;
+}
+.user{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    color: white;
+}
+.user span::before{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url(upload/home-common-sprite2x@v7.15.png) no-repeat 1px -35px;
+    background-size: 21px auto;
+    margin:1px auto;
+}
+
+/* banner */
+section{
+    width: 100%;
+}
+.banner{
+    height: 224px;
+    background: url(images/0zg4b120008ajwjifBCA8.webp) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* local-nav */
+.local-nav{
+    background: #fff;
+    border-radius: 8px;
+    margin: -52px 12px 10px;
+    display: flex;
+    padding: 4px 0 8px;
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    
+}
+.local-nav li{
+    flex: 1;
+    text-align: center;
+}
+.local-nav a{
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中 */
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+}
+.local-nav .icon-local{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(upload/home-fivemain-sprite2x@v7.15.png) no-repeat;
+    background-size: 35px auto;
+}
+
+/* nav */
+nav{
+    margin: 0 12px 1px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+nav div{
+    width: 100%;
+    height: 66px;
+}
+nav .nav-comment{
+    display: flex;
+    color: #f2f2f2;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    line-height: 66px;
+    box-sizing: border-box;
+}
+
+nav .nav-comment.grid-nav-hotel{
+    background: -webkit-gradient(linear,left top,right top,from(#fa5956),color-stop(54%,#fb8650));
+    background: linear-gradient(to right,#fa5956,#fb8650 54%);
+}
+nav .nav-comment.grid-nav-flight{
+    background: -webkit-gradient(linear left top,right top,form(#4b8fed)to(#53bced));
+    background: linear-gradient(to right,#4b8fed,#53bced);
+}
+nav .nav-comment.grid-nav-travel{
+    background: -webkit-gradient(linear,left top,right top,from(#34c2aa),to(#6cd557));
+    background: linear-gradient(to right,#34c2aa,#6cd557);
+    border-bottom: 0;
+}
+.nav-comment a{
+    flex: 2;
+    border-right: 1px #fff solid;
+    overflow: hidden;
+    color: #fff;
+}
+.nav-comment a:first-child{
+    flex: 3;
+    text-align: left;
+    padding-left: 12px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+.nav-comment a:nth-child(2){
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+.nav-comment a:last-child{
+    border-right: 0;
+}
+
+/* nav-hotel */
+nav .grid-nav-hotel a:first-child{
+    background-image: url(images/grid-nav-items-hotel@v7.15.png);
+    background-size: 73px auto;
+}
+nav .grid-nav-hotel a:nth-child(2){
+    flex: 2;
+    background-image: url(images/grid-nav-items-minsu@v7.15.png);
+    background-size: auto 20px;
+}
+nav .grid-nav-hotel a:nth-child(3){
+    flex: 4;
+    background: linear-gradient(to right,#ffbc49,#ffd252);
+}
+nav .grid-nav-hotel .grid-nav-jhj{
+    display: block;
+    color: #a05416;
+    background: url(images/grid-nav-items-hot.png) no-repeat right bottom;
+    background-size: 100% auto;
+}
+/* nav-flight */
+nav .grid-nav-flight a:first-child{
+    background-image: url(images/grid-nav-items-flight@v7.15.png);
+    background-size: auto 34px;
+}
+nav .grid-nav-flight a:nth-child(2){
+    background-image: url(images/grid-nav-items-train.png);
+    background-size: 36px auto;
+}
+/* nav-travel */
+nav .grid-nav-travel a:first-child{
+    background-image: url(images/grid-nav-items-travel@v7.15.png);
+    background-size: auto 42px;
+}
+nav .grid-nav-travel a:nth-child(2){
+    background-image: url(images/grid-nav-items-dingzhi@v7.15.png);
+    background-size: 61px auto;
+}
+
+
+/* subnav */
+.subnav-entry{
+    display: flex;
+    width: 100%;
+    margin: 0 10px 10px;
+    flex-wrap: wrap;
+}
+.subnav-entry li{
+    flex: 20%;
+}
+/* 第二种方法 
+.subnav-entry{
+    width: 100%;
+    margin: 0 10px 10px;
+}
+.subnav-entry li{
+   width:20%;
+   float:left;
+}
+*/
+
+.subnav-entry a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.subnav-entry .subnav-icon{
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(upload/un_ico_subnav2x@v7.152\ .png) no-repeat;
+    background-size: 28px auto;
+    margin-top: .63rem;
+    margin-bottom: .31rem;
+} 
+
+/* footer */
+.tool-box{
+    width: 100%;
+}
+.tool-box .tool-cn{
+    display: flex;
+    width: 100%;
+}
+.tool-box .tool-cn a{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tool-icon{
+    width: 21px;
+    height: 21px;
+    background: url(upload/home-common-sprite2x@v7.15.png) no-repeat -1px -78px;
+    background-size: 21px auto;
+}
+.tool-ver{
+    width: 100%;
+    text-align: center;
+}
+.tool-ver a{
+    color: #999;
+}
+footer p{
+    width: 100%;
+    text-align: center;
+}
+footer p,footer p a{
+    color: #999;
+}
